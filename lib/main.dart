@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myproject/game/tictactoe.dart';
 
 import 'game/snake_game.dart';
 import 'home/home.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         SnakeGame.routeName: (context) => const SnakeGame(),
         TicTacToeHome.routeName: (context) => const TicTacToeHome(),
         HomePage.routeName: (context) => const HomePage(),
+        TttGame.routeName: (context) => const TttGame(),
 
       },
       initialRoute: '/home',

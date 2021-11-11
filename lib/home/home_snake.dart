@@ -8,50 +8,60 @@ class HomeSnake extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var score = ModalRoute.of(context)!.settings.arguments as int?;
 
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.yellowAccent.shade400,
+          centerTitle: true,
+          title: Text('IggO GAME',style: GoogleFonts.pressStart2p(color: Colors.black),),
+        ),
         backgroundColor: Colors.black,
         body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Stack(
             children: [
-              SizedBox.shrink(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Snake_Game',
-                    style: GoogleFonts.pressStart2p(
-                        fontSize: 60, color: Colors.pinkAccent),
-                  ),
-                  Text(
-                    score == null ? 'SCORE: 0' : 'SCORE: $score',
-                    style:
-                    GoogleFonts.pressStart2p(fontSize: 25, color: Colors.white),
-                  ),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      shape: StadiumBorder(),
-                      side: BorderSide(width: 3, color: Colors.red),
-                    ),
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/snake');
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Text(
-                        'NEW GAME',
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'Snake_Game',
                         style: GoogleFonts.pressStart2p(
-                            fontSize: 35, color: Colors.white),
+                            fontSize: 35, color: Colors.pinkAccent),
                       ),
-                    ),
-                  ),
 
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          shape: StadiumBorder(),
+                          side: BorderSide(width: 3, color: Colors.red),
+                        ),
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(context, '/snake');
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            'NEW GAME',
+                            style: GoogleFonts.pressStart2p(
+                                fontSize: 20, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
-              Icon(Icons.arrow_forward_ios,size: 60,color: Colors.grey,),
+              Positioned(
+                bottom: 10,
+                right: 0,
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  size: 60,
+                  color: Colors.grey,
+                ),
+              )
             ],
           ),
         ),

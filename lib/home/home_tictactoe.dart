@@ -9,47 +9,70 @@ class TicTacToeHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.yellowAccent.shade400,
+          centerTitle: true,
+          title: Text('IggO GAME',style: GoogleFonts.pressStart2p(color: Colors.black),),
+        ),
         backgroundColor: Colors.black,
-        body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 16.0),
-                child: Icon(Icons.arrow_back_ios,size: 60,color: Colors.grey,),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(
-                    'TIC_TAC_TOE',
-                    style: GoogleFonts.pressStart2p(
-                        fontSize: 60, color: Colors.pinkAccent),
-                  ),
-
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      shape: StadiumBorder(),
-                      side: BorderSide(width: 3, color: Colors.red),
+        body: Stack(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          'TIC_TAC_TOE',
+                          style: GoogleFonts.pressStart2p(
+                              fontSize: 35, color: Colors.pinkAccent),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Text(
+                          '*Two Player Only*',
+                          style: GoogleFonts.pressStart2p(
+                              fontSize: 10, color: Colors.yellow),
+                        ),
+                      ],
                     ),
-                    onPressed: () {
 
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Text(
-                        'NEW GAME',
-                        style: GoogleFonts.pressStart2p(
-                            fontSize: 35, color: Colors.white),
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        shape: StadiumBorder(),
+                        side: BorderSide(width: 3, color: Colors.red),
+                      ),
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/tttgame');
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Text(
+                          'NEW GAME',
+                          style: GoogleFonts.pressStart2p(
+                              fontSize: 20, color: Colors.white),
+                        ),
                       ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
+              ],
+            ),
+            Positioned(
+              bottom: 10,
+              left: 15,
+              child: Icon(
+                Icons.arrow_back_ios,
+                size: 60,
+                color: Colors.grey,
               ),
-              SizedBox.shrink(),
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );

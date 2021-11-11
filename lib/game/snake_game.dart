@@ -118,7 +118,7 @@ class _SnakeGameState extends State<SnakeGame> {
                 ),
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, '/home',
-                      arguments: snake.length - 2);
+                      arguments: 0);
                 },
               ),
             ],
@@ -130,6 +130,11 @@ class _SnakeGameState extends State<SnakeGame> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.yellowAccent.shade400,
+          centerTitle: true,
+          title: Text('IggO GAME',style: GoogleFonts.pressStart2p(color: Colors.black),),
+        ),
         backgroundColor: Colors.black,
         body: Padding(
           padding: const EdgeInsets.all(16.0),
