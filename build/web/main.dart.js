@@ -53811,7 +53811,7 @@ K.B5(this.a,"/home",null,s,s)},
 $S:0}
 F.AY.prototype={
 O:function(a,b){var s=X.abl(null)
-return new S.rq(P.aG(["/homesnake",new F.S5(),"/snake",new F.S6(),"/hometic",new F.S7(),"/home",new F.S8(),"/tttgame",new F.S9(),"/iggo",new F.Sa()],t.N,t.hw),"/iggo","Flutter Demo",s,null)}}
+return new S.rq(P.aG(["/homesnake",new F.S5(),"/snake",new F.S6(),"/hometic",new F.S7(),"/home",new F.S8(),"/tttgame",new F.S9(),"/iggo",new F.Sa()],t.N,t.hw),"/iggo","IggO GAMEs",s,null)}}
 F.S5.prototype={
 $1:function(a){return C.o2},
 $S:359}
