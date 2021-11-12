@@ -32,7 +32,23 @@ class _TttGameState extends State<TttGame> {
         appBar: AppBar(
           backgroundColor: Colors.yellowAccent.shade400,
           centerTitle: true,
-          title: Text('IggO GAME',style: GoogleFonts.pressStart2p(color: Colors.black),),
+          title: Stack(
+            children: [
+              Text(
+                'IggO_GAMEs',
+                style: GoogleFonts.pressStart2p(
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 3.5
+                    ..color = Colors.pink,
+                ),
+              ),
+              Text(
+                'IggO_GAMEs',
+                style: GoogleFonts.pressStart2p(color: Colors.black),
+              ),
+            ],
+          ),
         ),
         backgroundColor: Colors.black,
         body: Padding(

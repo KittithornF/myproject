@@ -14,55 +14,69 @@ class HomeSnake extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.yellowAccent.shade400,
           centerTitle: true,
-          title: Text('IggO GAME',style: GoogleFonts.pressStart2p(color: Colors.black),),
-        ),
-        backgroundColor: Colors.black,
-        body: Center(
-          child: Stack(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Stack(
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        'Snake_Game',
-                        style: GoogleFonts.pressStart2p(
-                            fontSize: 35, color: Colors.pinkAccent),
-                      ),
-
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: StadiumBorder(),
-                          side: BorderSide(width: 3, color: Colors.red),
-                        ),
-                        onPressed: () {
-                          Navigator.pushReplacementNamed(context, '/snake');
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text(
-                            'NEW GAME',
-                            style: GoogleFonts.pressStart2p(
-                                fontSize: 20, color: Colors.white),
-                          ),
-                        ),
-                      ),
-                    ],
+                  Text(
+                    'IggO_GAMEs',
+                    style: GoogleFonts.pressStart2p(
+                      foreground: Paint()
+                        ..style = PaintingStyle.stroke
+                        ..strokeWidth = 3.5
+                        ..color = Colors.pink,
+                    ),
+                  ),
+                  Text(
+                    'IggO_GAMEs',
+                    style: GoogleFonts.pressStart2p(color: Colors.black),
                   ),
                 ],
               ),
-              Positioned(
-                bottom: 10,
-                right: 0,
-                child: Icon(
-                  Icons.arrow_forward_ios,
-                  size: 60,
-                  color: Colors.grey,
-                ),
-              )
+              Icon(Icons.arrow_forward_ios,color: Colors.black,),
+
             ],
+          ),
+        ),
+        backgroundColor: Colors.black,
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: FittedBox(
+              fit: BoxFit.contain,
+              child: Column(
+                children: [
+                  Text(
+                    'Snake_Game',
+                    style: GoogleFonts.pressStart2p(
+                        fontSize: 55, color: Colors.pinkAccent),
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
+
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      shape: StadiumBorder(),
+                      side: BorderSide(width: 3, color: Colors.red),
+                    ),
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/snake');
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Text(
+                        'NEW_GAME',
+                        style: GoogleFonts.pressStart2p(
+                            fontSize: 30, color: Colors.white),
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
           ),
         ),
       ),

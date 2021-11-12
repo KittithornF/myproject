@@ -105,7 +105,7 @@ class _SnakeGameState extends State<SnakeGame> {
           return AlertDialog(
             title: Text('GAME OVER',
                 style:
-                GoogleFonts.pressStart2p(fontSize: 20, color: Colors.red)),
+                    GoogleFonts.pressStart2p(fontSize: 20, color: Colors.red)),
             content: Text(
               'SCORE: ${snake.length - 2}',
               style: GoogleFonts.pressStart2p(fontSize: 15),
@@ -133,7 +133,23 @@ class _SnakeGameState extends State<SnakeGame> {
         appBar: AppBar(
           backgroundColor: Colors.yellowAccent.shade400,
           centerTitle: true,
-          title: Text('IggO GAME',style: GoogleFonts.pressStart2p(color: Colors.black),),
+          title: Stack(
+            children: [
+              Text(
+                'IggO_GAMEs',
+                style: GoogleFonts.pressStart2p(
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 3.5
+                    ..color = Colors.pink,
+                ),
+              ),
+              Text(
+                'IggO_GAMEs',
+                style: GoogleFonts.pressStart2p(color: Colors.black),
+              ),
+            ],
+          ),
         ),
         backgroundColor: Colors.black,
         body: Padding(
@@ -190,7 +206,8 @@ class _SnakeGameState extends State<SnakeGame> {
                             margin: EdgeInsets.all(1.5),
                             decoration: BoxDecoration(
                               color: color,
-                              shape: BoxShape.circle,
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular(2),
                             ),
                           );
                         },
@@ -260,7 +277,6 @@ class _SnakeGameState extends State<SnakeGame> {
                         color: Colors.white,
                         iconSize: 40,
                         splashRadius: 20,
-
                         padding: EdgeInsets.zero,
                         constraints: BoxConstraints(),
                       ),

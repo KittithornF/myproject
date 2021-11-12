@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myproject/game/tictactoe.dart';
+import 'package:myproject/home/iggo.dart';
 
 import 'game/snake_game.dart';
 import 'home/home.dart';
@@ -28,9 +29,10 @@ class MyApp extends StatelessWidget {
         TicTacToeHome.routeName: (context) => const TicTacToeHome(),
         HomePage.routeName: (context) => const HomePage(),
         TttGame.routeName: (context) => const TttGame(),
+        IggOHome.routeName: (context) => const IggOHome(),
 
       },
-      initialRoute: '/home',
+      initialRoute: '/iggo',
     );
   }
 }
