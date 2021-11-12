@@ -117,8 +117,9 @@ class _SnakeGameState extends State<SnakeGame> {
                   style: GoogleFonts.pressStart2p(color: Colors.red),
                 ),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/home',
-                      arguments: 0);
+                  Navigator.pop(context);
+                  Navigator.pop(context);
+
                 },
               ),
             ],

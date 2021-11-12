@@ -130,7 +130,8 @@ class _TttGameState extends State<TttGame> {
                   style: GoogleFonts.pressStart2p(color: Colors.red),
                 ),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/home',arguments: 1);
+                  Navigator.pop(context);
+                  Navigator.pop(context);
                 },
               ),
             ],

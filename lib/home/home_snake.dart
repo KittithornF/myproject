@@ -62,7 +62,7 @@ class HomeSnake extends StatelessWidget {
                       side: BorderSide(width: 3, color: Colors.red),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/snake');
+                      Navigator.pushNamed(context, '/snake');
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
